@@ -9,7 +9,9 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    position: relative;
+  /*right: 35%;   Centering the logo initially */
+    animation: App-logo-slide 5s infinite linear alternate, App-logo-spin 20s infinite linear;
   }
 }
 
@@ -34,5 +36,17 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-slide {
+  0% {
+    right: 15%; /* Start at 35% */
+  }
+  50% {
+    right: 0%; /* Move to 65% */
+  }
+  100% {
+    right: -15%; /* Back to 35% */
   }
 }
