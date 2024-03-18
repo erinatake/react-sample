@@ -1,4 +1,6 @@
 {
+  "homepage": "https://erinatake.github.io/react-sample/",
+
   "name": "react-sample",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +14,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "clean": "rd /s /q docs",
+    "move": "move build docs",
+    "git": "git add . && git commit && git push origin master",
+    "deploy": "npm run clean && npm run build && npm run move && npm run git",
+
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
